@@ -210,52 +210,52 @@ if (projectCarousel) {
 }
 
 // Contact form validation with helpful messages.
-function showError(input, message) {
-  const errorEl = document.getElementById(`${input.id}Error`);
-  errorEl.textContent = message;
-  input.setAttribute('aria-invalid', 'true');
-}
+// function showError(input, message) {
+//   const errorEl = document.getElementById(`${input.id}Error`);
+//   errorEl.textContent = message;
+//   input.setAttribute('aria-invalid', 'true');
+// }
 
-function clearError(input) {
-  const errorEl = document.getElementById(`${input.id}Error`);
-  errorEl.textContent = '';
-  input.removeAttribute('aria-invalid');
-}
+// function clearError(input) {
+//   const errorEl = document.getElementById(`${input.id}Error`);
+//   errorEl.textContent = '';
+//   input.removeAttribute('aria-invalid');
+// }
 
-function validateEmail(email) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-}
+// function validateEmail(email) {
+//   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+// }
 
-if (form) {
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const name = form.elements.name;
-    const email = form.elements.email;
-    const subject = form.elements.subject;
-    const message = form.elements.message;
+// if (form) {
+//   form.addEventListener('submit', (event) => {
+//     event.preventDefault();
+//     const name = form.elements.name;
+//     const email = form.elements.email;
+//     const subject = form.elements.subject;
+//     const message = form.elements.message;
 
-    let isValid = true;
+//     let isValid = true;
 
-    [name, email, subject, message].forEach(input => {
-      if (!input.value.trim()) {
-        showError(input, 'This field is required.');
-        isValid = false;
-      } else {
-        clearError(input);
-      }
-    });
+//     [name, email, subject, message].forEach(input => {
+//       if (!input.value.trim()) {
+//         showError(input, 'This field is required.');
+//         isValid = false;
+//       } else {
+//         clearError(input);
+//       }
+//     });
 
-    if (email.value && !validateEmail(email.value)) {
-      showError(email, 'Please enter a valid email address.');
-      isValid = false;
-    }
+//     if (email.value && !validateEmail(email.value)) {
+//       showError(email, 'Please enter a valid email address.');
+//       isValid = false;
+//     }
 
-    if (isValid) {
-      alert('Message submitted successfully! Replace this with real form handling.');
-      form.reset();
-    }
-  });
-}
+//     if (isValid) {
+//       alert('Message submitted successfully! Replace this with real form handling.');
+//       form.reset();
+//     }
+//   });
+// }
 
 // Setup accessible smooth scroll for anchor links.
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
